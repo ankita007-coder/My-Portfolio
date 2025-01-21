@@ -129,3 +129,38 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
+.steps{
+    margin-top: 4rem;
+}
+.steps-head{
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 400;
+}
+.steps h4{
+    color: white;
+    text-align: center;
+    font-family: 'Santoshi';
+}
+.steps-head span{
+    font-family: 'Gambetta Italic';
+    
+}
+.steps .one-liner{
+    width: 80%;
+}
+
+.timeline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline .arrow-outline{
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}

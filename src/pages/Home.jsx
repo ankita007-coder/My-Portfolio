@@ -5,6 +5,7 @@ import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import AOS from "aos";
+import { Timeline } from "../components";
 
 const Home = () => {
   useEffect(() => {
@@ -85,7 +86,7 @@ const Home = () => {
           <h2>Selected Work</h2>
           <Link to="/work" className="link">
             <span className="arrow-outline">
-            <PiArrowUpRightBold />
+              <PiArrowUpRightBold />
             </span>
             <p>See all</p>
           </Link>
@@ -104,6 +105,21 @@ const Home = () => {
           </div>
         </div>
         <div></div>
+      </section>
+
+      <section className="steps">
+        <h4>THE PROCESS</h4>
+        <h2 className="head steps-head">
+          Your Website <br /> <span>in 5 steps</span>
+        </h2>
+        <p className="one-liner">
+          baadjhewbf wjbf3fj wefbwfb wefh3ufufb whf3ffbb
+        </p>
+
+        <div className="timeline">
+            <div className="arrow-outline"><FaArrowDown/></div>
+            <Timeline/>
+        </div>
       </section>
     </div>
   );

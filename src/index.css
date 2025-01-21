@@ -34,3 +34,17 @@ body{
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Gambetta';
+  src: url('./assets/fonts/Gambetta.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gambetta Italic';
+  src: url('./assets/fonts/GambettaItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
