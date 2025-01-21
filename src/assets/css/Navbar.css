@@ -1,0 +1,30 @@
+.link{
+    color: white;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+nav{
+    background-color: #0c0d0b9c;
+    box-shadow: 0 0 4px 1px #756f6f;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: fixed;
+    margin-top: 20px;
+    border-radius: 8px;
+    z-index: 10;
+    backdrop-filter: blur(20px);
+}
+.link:hover{
+    text-decoration: underline
+}
+.active{
+    color: var(--neongreen);
+}
