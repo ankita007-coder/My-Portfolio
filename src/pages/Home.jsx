@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import dp from "../assets/images/404.png";
+import dp from "../assets/images/laptop.jpg";
 import "../assets/css/Home.css";
 import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -7,9 +7,9 @@ import { PiArrowUpRightBold } from "react-icons/pi";
 import AOS from "aos";
 
 const Home = () => {
-    useEffect(()=>{
-        AOS.init();
-    },[])
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="home">
       <div>
@@ -81,10 +81,27 @@ const Home = () => {
       </section>
 
       <section className="selected-work">
-        <h2>Selected Work</h2>
-        <div>
-            <div></div>
-            <div></div>
+        <div className="work-head">
+          <h2>Selected Work</h2>
+          <Link to="/work" className="link">
+            <span className="arrow-outline">
+            <PiArrowUpRightBold />
+            </span>
+            <p>See all</p>
+          </Link>
+        </div>
+
+        <div className="works" data-aos="fade-up">
+          <div className="image">
+            <img src={dp} alt="" srcset="" />
+            <div className="image-text">
+              <p>Chavi Design</p>
+              <p>Web Dev</p>
+            </div>
+          </div>
+          <div className="image">
+            <img src={dp} alt="" srcset="" />
+          </div>
         </div>
         <div></div>
       </section>
