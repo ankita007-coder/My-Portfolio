@@ -82,6 +82,11 @@ const Home = () => {
 
       <section className="selected-work">
         <h2>Selected Work</h2>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <div></div>
       </section>
     </div>
   );
