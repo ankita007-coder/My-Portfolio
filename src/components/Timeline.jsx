@@ -1,103 +1,63 @@
-import React from "react";
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import React, { useEffect } from "react";
+import "../assets/css/Timeline.css";
+import AOS from "aos";
+const timelineData = [
+  {
+    number: "01",
+    title: "DISCOVERY CALL",
+    subtitle: "DO WE MATCH?",
+    time: "2 HOURS",
+    description:
+      "Let's get to know each other! Before we build your website, we need to understand your goals and challenges. Think of it as a brainstorming session with a fun twist - we'll work together to bring your vision to life!",
+  },
+  {
+    number: "02",
+    title: "CONCEPT & STRATEGY",
+    subtitle: "CHOOSING THE RIGHT PATH",
+    time: "2 DAYS",
+    description:"Choosing the right path for your website is like picking the perfect adventure. We'll explore options like Shopify (easy peasy for online stores), Wix (for those with creative flair), WordPress (for customization enthusiasts), and MERN Stack (for the tech-savvy). Together, we'll map out your dream website and set off on an exciting journey to bring it to life!"
+  },
+  {
+    number: "03",
+    title: "CUSTOM WEB DESIGN",
+    subtitle: "SOME MAGIC",
+    time: "2 WEEKS",
+    description:"Get ready for some magic! You'll have a visually stunning website that's as unique as your brand. Whether you're using Shopify, Wix, or WordPress, templates will be customized to perfection. And if you're diving into the MERN Stack, a design will be built from scratch that's sure to wow. Expect a website that looks amazing on any device and offers a user experience that's simply delightful."
+  },
+  {
+    number: "04",
+    title: "DEVELOPMENT",
+    subtitle: "BRINGING IT TO LIFE",
+    time: "VARIABLE",
+    description:"Get ready to watch your website come to life! The development phase will vary depending on your chosen platform. For Shopify, Wix, and WordPress, we'll focus on platform setup, plugin integration, and making sure your website is search engine-friendly. If you're building with MERN Stack, expect a robust and scalable application. Throughout the process, we'll conduct rigorous testing to ensure your website runs smoothly on any device."
+    },
+  {
+    number: "05",
+    title: "LAUNCH & SUPPORT",
+    subtitle: "IT'S SHOWTIME!",
+    time: "1 WEEK",
+    description:
+"It's showtime! We'll ensure a smooth launch on your chosen platform, or hand over the reins to you for deployment. The excitement doesn't stop there! Depending on our contract, we'll be here for you with ongoing support, ready to help you update your website and add new features whenever your heart desires. Let's make your website a star!" 
+ },
+];
 
 const Timeline = () => {
+    useEffect(() => {
+      AOS.init();
+    }, []);
   return (
-    <VerticalTimeline>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        date="2011 - present"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon="01"
-      >
-        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, Project
-          Management, Team Leading
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2010 - 2011"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon="02"
-      >
-        <h3 className="vertical-timeline-element-title">Art Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">
-          San Francisco, CA
-        </h4>
-        <p>
-          Creative Direction, User Experience, Visual Design, SEO, Online
-          Marketing
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2008 - 2010"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon=""
-      >
-        <h3 className="vertical-timeline-element-title">Web Designer</h3>
-        <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-        <p>User Experience, Visual Design</p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2006 - 2008"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon=""
-      >
-        <h3 className="vertical-timeline-element-title">Web Designer</h3>
-        <h4 className="vertical-timeline-element-subtitle">
-          San Francisco, CA
-        </h4>
-        <p>User Experience, Visual Design</p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="April 2013"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-        icon=""
-      >
-        <h3 className="vertical-timeline-element-title">
-          Content Marketing for Web, Mobile and Social Media
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-        <p>Strategy, Social Media</p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="November 2012"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-        icon=""
-      >
-        <h3 className="vertical-timeline-element-title">
-          Agile Development Scrum Master
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-        <p>Creative Direction, User Experience, Visual Design</p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="2002 - 2006"
-        iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-        icon=""
-      >
-        <h3 className="vertical-timeline-element-title">
-          Bachelor of Science in Interactive Digital Media Visual Imaging
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-        <p>Creative Direction, Visual Design</p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-        icon="01"
-      />
-    </VerticalTimeline>
+    <div className="timeline-container">
+      {timelineData.map((event, index) => (
+        <div key={index} className="timeline-item">
+          <div className={`timeline-box ${index % 2 === 0 ? "right" : "left"}`} data-aos={`${index % 2 === 0 ? "fade-left" : "fade-right"}`}>
+            <h4>{event.subtitle}</h4>
+            <h3>{event.title}</h3>
+            <p>{event.description}</p>
+          </div>
+          <div className="timeline-number">{event.number}</div>
+        </div>
+      ))}
+    </div>
   );
 };
 

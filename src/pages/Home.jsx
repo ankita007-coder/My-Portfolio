@@ -118,8 +118,9 @@ const Home = () => {
 
         <div className="timeline">
             <div className="arrow-outline"><FaArrowDown/></div>
-            <Timeline/>
+           
         </div>
+        <Timeline/>
       </section>
     </div>
   );
