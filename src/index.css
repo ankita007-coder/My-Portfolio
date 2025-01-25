@@ -7,6 +7,8 @@
 body{
   background-color: black;
 overflow-x: hidden;
+padding: 0;
+margin: 0;
 }
 
 .link{
@@ -47,4 +49,15 @@ overflow-x: hidden;
   src: url('./assets/fonts/GambettaItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Logo';
+  src: url('./assets/fonts/NeuePower-Ultra.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.logo{
+  font-family: 'Logo';
+  font-size: 18px;
 }

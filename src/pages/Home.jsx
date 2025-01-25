@@ -5,7 +5,14 @@ import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import AOS from "aos";
-import { Timeline } from "../components";
+import { Marquee, Testimonial, Timeline } from "../components";
+import {
+  SlSocialGithub,
+  SlSocialGoogle,
+  SlSocialInstagram,
+  SlSocialLinkedin,
+  SlSocialYoutube,
+} from "react-icons/sl";
 
 const Home = () => {
   useEffect(() => {
@@ -115,13 +122,60 @@ const Home = () => {
         <p className="one-liner">
           baadjhewbf wjbf3fj wefbwfb wefh3ufufb whf3ffbb
         </p>
-
         <div className="timeline">
-            <div className="arrow-outline"><FaArrowDown/></div>
-           
+          <div className="arrow-outline">
+            <FaArrowDown />
+          </div>
         </div>
-        <Timeline/>
+        <Timeline />
       </section>
+
+      <section className="testimonial">
+        <h2 className="head steps-head">
+          What my <br /> <span>clients say</span>
+        </h2>
+        <div>
+          <p className="one-liner">
+            See what my clients have to say about working with me and the
+            results I helped them achieve.
+          </p>
+        </div>
+        <Testimonial />
+      </section>
+      <section className="about">
+        <div></div>
+        <div className="about-text">
+          <div>
+            <h3 className="steps-head">
+              A website that leaves <br /> <span>a lasting impression!</span>
+            </h3>
+          </div>
+          <div>
+            <p>
+              Hi, I'm Ankita Budhia – a full-stack MERN developer with expertise
+              in React.js , as well as web design and development for Wix,
+              WordPress, and Shopify. I’m passionate about creating dynamic,
+              visually appealing, and user-friendly websites. Whether you're
+              looking for custom web development or intuitive design, I bring a
+              personal touch to every project. Let’s work together to bring your
+              ideas to life and create something extraordinary!
+            </p>
+            <div className="social-icons">
+              <div className="icons">
+                <SlSocialGoogle />
+              </div>
+              <div className="icons">
+                <SlSocialInstagram />
+              </div>{" "}
+              <div className="icons">
+                <SlSocialLinkedin />
+              </div>{" "}
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      
     </div>
   );
 };

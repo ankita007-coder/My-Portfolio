@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from './components'
+import { Footer, Navbar } from './components'
 import { Route, Routes } from 'react-router-dom'
 import { About, Contact, Home, Services, Work } from './pages'
 
@@ -14,6 +14,7 @@ const App = () => {
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
+      <Footer/>
     </div>
   )
 }

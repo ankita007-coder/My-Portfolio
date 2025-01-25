@@ -1,0 +1,41 @@
+/* Wrapper to cover the full screen */
+.marquee-wrapper {
+    width: 100%;
+    margin-top: 40px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    background-color: #dac5a723; /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+  }
+  
+  /* The container for the marquee text */
+  .marquee {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  /* Individual text spans */
+  .marquee span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; 
+    font-family: 'Santoshi',sans-serif;
+    margin-right: 50px; /* Space between repeated texts */
+  }
+  
+  /* Keyframes for smooth scrolling */
+  @keyframes scroll {
+    from {
+      transform: translateX(0); /* Start at the default position */
+    }
+    to {
+      transform: translateX(-100%); /* Move entire marquee off screen */
+    }
+  }
+  
