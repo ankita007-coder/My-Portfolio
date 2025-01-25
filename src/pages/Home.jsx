@@ -5,13 +5,11 @@ import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import AOS from "aos";
-import { Marquee, Testimonial, Timeline } from "../components";
+import { Testimonial, Timeline } from "../components";
 import {
-  SlSocialGithub,
   SlSocialGoogle,
   SlSocialInstagram,
   SlSocialLinkedin,
-  SlSocialYoutube,
 } from "react-icons/sl";
 
 const Home = () => {
