@@ -1,0 +1,11 @@
+.work-box{
+    display: flex;
+    margin-top: 4rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.work-box div{
+    width: 40%;
+}

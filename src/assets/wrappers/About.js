@@ -67,14 +67,43 @@ const Wrapper = styled.div`
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            .text{
+                width: 30%;
+                p{
+                    font-size: 1.4rem;
+                }
+            }
             .slider{
-                width: 60%;
+                width: 40%;
                 img{
                     width: 100%;
                 }
             }
         }
     }
+
+.slick-slide {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+ 
+ color: var(--neongreen);
+ border-radius: 50%;
+}
+
+
+.slick-dots li button:before {
+  color: #fff;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--neongreen);
+}
+
 `;
 
 export default Wrapper;

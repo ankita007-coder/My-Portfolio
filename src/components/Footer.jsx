@@ -29,6 +29,14 @@ const Footer = () => {
       label: "About",
     },
     {
+      url: "/pricing",
+      label: "Pricing",
+    },
+    {
+      url: "/blog",
+      label: "Blog",
+    },
+    {
       url: "/contact",
       label: "Contact",
     },
@@ -43,7 +51,7 @@ const Footer = () => {
         <p className="one-liner">
         Crafting tailored digital experiences with expertise <br />in MERN, Shopify, Wix, and WordPress.
         </p>
-        <Link className="link button">Get in touch!</Link>
+        <Link to="/contact" className="link button">Get in touch!</Link>
       </section>
       <footer>
             <div className="logo-about">
