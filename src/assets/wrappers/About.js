@@ -9,15 +9,13 @@ const Wrapper = styled.div`
     gap: 40px;
     justify-content: space-evenly;
     .my-pic {
-      width: 40%;
+      width: 50%;
       height: 100%;
       position: sticky;
-      top: 0;
-      overflow-y: hidden;
-      img {
-        width: 100%;
+      top: 20px;
+      overflow: hidden;
+      img{
         height: 100%;
-        object-fit: cover;
       }
     }
 

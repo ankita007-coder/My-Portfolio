@@ -1,12 +1,14 @@
 import React from "react";
 import "../assets/css/Home.css";
-import dp from "../assets/images/laptop.jpg";
+import dp from "../assets/images/profile.png";
 import Wrapper from "../assets/wrappers/About";
 import Slider from "react-slick";
 import coffee from "../assets/images/cold coffee.jpg";
-import pasta from "../assets/images/pasta.jpg"
+import pasta from "../assets/images/pasta.jpg";
 import pav from "../assets/images/pav bhaji.jpg";
-import oats from "../assets/images/oats cupcaks.jpg"
+import oats from "../assets/images/oats cupcaks.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const About = () => {
   const list = [
     {
@@ -19,7 +21,7 @@ const About = () => {
     },
     {
       name: "Experimenting in the kitchen, perfecting my next recipe.",
-      images: [coffee, pav,pasta,oats],
+      images: [coffee, pav, pasta, oats],
     },
   ];
 
@@ -29,8 +31,8 @@ const About = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: true, 
-  autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 1000,
     responsive: [
       {
         breakpoint: 1024,
@@ -60,7 +62,13 @@ const About = () => {
     <Wrapper>
       <div className="about-me">
         <div className="my-pic">
-          <img src={dp} alt="profile" />
+          {/* <img src={dp} alt="profile" /> */}
+          <LazyLoadImage
+            src={dp}
+            alt="profile"
+            effect="blur" 
+            className="my-pic-box"
+          />
         </div>
         <div className="me-text">
           <h3 className="steps-head">
@@ -110,8 +118,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        
-        </div>
+      </div>
 
       <div className="others">
         <div className="steps-head">
@@ -125,17 +132,17 @@ const About = () => {
             <div className="text">
               <p>{item.name}</p>
             </div>
-           <div className="slider">
-           {item.images.length > 0 && (
-              <Slider {...settings}>
-                {item.images.map((image, idx) => (
-                  <div key={idx} className="slider-item">
-                    <img src={image} alt={`carousel-${idx}`} />
-                  </div>
-                ))}
-              </Slider>
-            )}
-           </div>
+            <div className="slider">
+              {item.images.length > 0 && (
+                <Slider {...settings}>
+                  {item.images.map((image, idx) => (
+                    <div key={idx} className="slider-item">
+                      <img src={image} alt={`carousel-${idx}`} />
+                    </div>
+                  ))}
+                </Slider>
+              )}
+            </div>
           </div>
         ))}
       </div>

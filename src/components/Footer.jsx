@@ -29,8 +29,8 @@ const Footer = () => {
       label: "About",
     },
     {
-      url: "/pricing",
-      label: "Pricing",
+      url: "/skills",
+      label: "Skills",
     },
     {
       url: "/blog",

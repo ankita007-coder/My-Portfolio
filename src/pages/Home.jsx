@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import dp from "../assets/images/laptop.jpg";
+import dp from "../assets/images/profile.png";
 import "../assets/css/Home.css";
 import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -11,7 +11,10 @@ import {
   SlSocialInstagram,
   SlSocialLinkedin,
 } from "react-icons/sl";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Skills from "./Skills";
+import lapy from "../assets/images/laptop.jpg"
 const Home = () => {
   useEffect(() => {
     AOS.init();
@@ -19,13 +22,20 @@ const Home = () => {
   return (
     <div className="home">
       <div>
-        <img src={dp} alt="" srcset="" />
+        <LazyLoadImage
+          src={dp}
+          alt="profile"
+          effect="blur"
+          className="my-pic-box"
+          width="100%"
+        />
       </div>
       <h1 className="head">Web Developer</h1>
       <p className="one-liner">
-        baadjhewbf wjbf3fj wefbwfb wefh3ufufb whf3ffbb
+        Crafting tailored digital experiences with expertise in <br /> MERN,
+        Shopify, Wix, and WordPress.
       </p>
-
+      <Skills />
       <div className="link-service">
         <a href="#services" className="link">
           <span className="arrow">
@@ -99,14 +109,14 @@ const Home = () => {
 
         <div className="works" data-aos="fade-up">
           <div className="image">
-            <img src={dp} alt="" srcset="" />
+            <img src={lapy} alt="" srcset="" />
             <div className="image-text">
               <p>Chavi Design</p>
               <p>Web Dev</p>
             </div>
           </div>
           <div className="image">
-            <img src={dp} alt="" srcset="" />
+            <img src={lapy} alt="" srcset="" />
           </div>
         </div>
         <div></div>
@@ -118,7 +128,7 @@ const Home = () => {
           Your Website <br /> <span>in 5 steps</span>
         </h2>
         <p className="one-liner">
-          baadjhewbf wjbf3fj wefbwfb wefh3ufufb whf3ffbb
+        Our process ensures that we create a website <br /> tailored to your business needs.
         </p>
         <div className="timeline">
           <div className="arrow-outline">
@@ -128,7 +138,7 @@ const Home = () => {
         <Timeline />
       </section>
 
-      <section className="testimonial">
+      <section className="testimonial" id="testimonial">
         <h2 className="head steps-head">
           What my <br /> <span>clients say</span>
         </h2>
@@ -172,8 +182,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-     
-      
     </div>
   );
 };
