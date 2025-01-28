@@ -1,18 +1,11 @@
 
 import lapy from "../assets/images/laptop.jpg";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 import "../assets/css/Testimonial.css"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 const Testimonial = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   const slides = [
     {
       title: "Chavi Kumari",
