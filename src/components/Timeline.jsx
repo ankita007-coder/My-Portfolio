@@ -43,15 +43,16 @@ const timelineData = [
 
 const Timeline = () => {
     useEffect(() => {
-      AOS.init();
+      AOS.init({ duration: 1000 });
     }, []);
   return (
     <div className="timeline-container">
       {timelineData.map((event, index) => (
         <div key={index} className="timeline-item">
           <div className={`timeline-box ${index % 2 === 0 ? "right" : "left"}`} data-aos={`${index % 2 === 0 ? "fade-left" : "fade-right"}`}>
-            <h4>{event.subtitle}</h4>
-            <h3>{event.title}</h3>
+            <h4 className="time">{event.time}</h4>
+            <h4 className="subtitle">{event.subtitle}</h4>
+            <h3 style={{margin:"2px"}}>{event.title}</h3>
             <p>{event.description}</p>
           </div>
           <div className="timeline-number">{event.number}</div>

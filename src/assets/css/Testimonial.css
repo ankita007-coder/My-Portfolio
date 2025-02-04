@@ -9,11 +9,21 @@
 }
 
 .profile-img{
-    width: 40%;
+    border-radius: 50%;
+    border:2px solid rgba(85, 163, 51, 0.664);
 }
 .profile-img img{
     border-radius: 50%;
 }
 .review-text{
     width: 45%;
+}
+.review-text p{
+    padding: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .slides{
+        width: 50%;
+    }
 }

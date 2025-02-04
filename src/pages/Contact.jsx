@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Wrapper from "../assets/wrappers/Contact";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import dp from "../assets/images/profile.png";
+import {
+  SlSocialGithub,
+  SlSocialGoogle,
+  SlSocialInstagram,
+  SlSocialLinkedin,
+  SlSocialYoutube,
+} from "react-icons/sl";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +29,10 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      const response = await axios.post("https://portfolio-backend-mbhw.onrender.com/send", formData);
+      const response = await axios.post(
+        "https://portfolio-backend-mbhw.onrender.com/send",
+        formData
+      );
       if (response.data.success) {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
@@ -36,47 +47,68 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            style={{ width: "100%", padding: "8px", margin: "10px 0" }}
-          />
+      <div className="contact-image">
+        <LazyLoadImage src={dp} />
+      </div>
+      <div className="contact-details">
+        <div className="contact-form">
+          <h2>Let's get in touch!</h2>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="5"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button type="submit" className="btn">
+              Send
+            </button>
+          </form>
+          {status && <p>{status}</p>}
         </div>
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"w
-            value={formData.email}
-            onChange={handleChange}
-            required
-        
-          />
+        <div className="social-media">
+          <div className="icons">
+            <SlSocialGithub />
+          </div>
+          <div className="icons">
+            <SlSocialGoogle />
+          </div>
+          <div className="icons">
+            <SlSocialInstagram />
+          </div>{" "}
+          <div className="icons">
+            <SlSocialLinkedin />
+          </div>{" "}
+          <div className="icons">
+            <SlSocialYoutube />
+          </div>
         </div>
-        <div>
-          <label>Message</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows="5"
-            style={{ width: "100%", padding: "8px", margin: "10px 0" }}
-          ></textarea>
-        </div>
-        <button type="submit" style={{ padding: "10px 20px", cursor: "pointer" }}>
-          Send
-        </button>
-      </form>
-      {status && <p>{status}</p>}
-      </Wrapper>
+      </div>
+    </Wrapper>
   );
 };
 

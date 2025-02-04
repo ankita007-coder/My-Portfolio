@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import dp from "../assets/images/profile.png";
 import "../assets/css/Home.css";
 import { FaArrowDown } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import AOS from "aos";
 import { Testimonial, Timeline } from "../components";
@@ -15,10 +15,18 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skills from "./Skills";
 import lapy from "../assets/images/laptop.jpg"
+import Marquee from "react-fast-marquee";
+import chavilogo from "../assets/images/logochavi.png"
+import mealmitra from "../assets/images/meal_mitra_logo.png"
+import { services } from "../assets/utils/data";
+
 const Home = () => {
+
+  const logoList = [chavilogo, mealmitra];
   useEffect(() => {
-    AOS.init();
+    AOS.init({duration:1000});
   }, []);
+
   return (
     <div className="home">
       <div>
@@ -44,56 +52,38 @@ const Home = () => {
           <p>MY SERVICES</p>
         </a>
       </div>
-
+      <Marquee   style={{
+    background: "#3228186a",
+    color: "white",
+    padding: "10px",
+    margin:"2rem 0 0",
+    height: "80px",
+    borderTop:"1px solid #c8f90424",
+    borderBottom:"1px solid #c8f90424",}}>
+        {
+          logoList.map((logo)=>{
+            return <LazyLoadImage src={logo} effect="blur" className="logo-marquee"/>
+          })
+        }
+      </Marquee>
       <section className="services" id="services" data-aos="fade-up">
-        <div>
-          <span className="number">01</span>
-          <h2>WEB DEVELOPMENT</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <Link to="/services" className="link">
-            <span className="arrow-outline">
-              <PiArrowUpRightBold />
-            </span>{" "}
-            ABOUT WEB DEVELOPMENT
-          </Link>
-        </div>
-        <div>
-          <span className="number">02</span>
-          <h2>WEB DEVELOPMENT</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <Link to="/services" className="link">
-            <span className="arrow-outline">
-              <PiArrowUpRightBold />
-            </span>{" "}
-            ABOUT WEB DEVELOPMENT
-          </Link>
-        </div>
-        <div>
-          <span className="number">03</span>
-          <h2>WEB DEVELOPMENT</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <Link to="/services" className="link">
-            <span className="arrow-outline">
-              <PiArrowUpRightBold />
-            </span>{" "}
-            ABOUT WEB DEVELOPMENT
-          </Link>
-        </div>
+        {
+          services.map((service,idx)=>{
+            return <div>
+            <span className="number">0{idx+1}</span>
+            <h2>{service.title}</h2>
+            <p>
+              {service.desc}
+            </p>
+            <Link to="/services" className="link">
+              <span className="arrow-outline">
+                <PiArrowUpRightBold />
+              </span>{" "}
+              About {service.title}
+            </Link>
+          </div>
+          })
+        }
       </section>
 
       <section className="selected-work">

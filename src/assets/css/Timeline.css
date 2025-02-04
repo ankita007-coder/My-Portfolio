@@ -157,6 +157,7 @@
   z-index: 1;
 }
 
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .timeline-container::before {
@@ -176,4 +177,22 @@
   .timeline-number {
     left: 10%;
   }
+}
+
+h4{
+  margin: 2px;
+  color: var(--neongreen) !important;
+}
+.time{
+  float: right !important;
+  font-size: 0.7rem;
+  padding: 8px;
+  background-color: hsla(35, 41%, 75%, 0.05);
+  border: 1px solid rgba(201, 250, 5, 0.279);
+  border-radius: 4px;
+}
+.subtitle{
+  margin:10px 2px 4px;
+  font-size: 0.8rem;
+  text-align: left !important;
 }

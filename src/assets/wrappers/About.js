@@ -26,9 +26,10 @@ const Wrapper = styled.div`
       scrollbar-width: none;
       padding: 20px;
       box-sizing: border-box;
-      h3 {
+      h1 {
         margin-bottom: 10px;
         text-align: left;
+        color: var(--neongreen);
         span {
           font-size: 8rem;
         }

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="nav">
-      <nav>
+      <nav className="big-screen">
         <NavLink to="/" className={({ isActive }) => (isActive ? "active link logo" : "link logo")}>Ankita Budhia</NavLink>
         <NavLink to="/services" className={({ isActive }) => (isActive ? "active link" : "link")}>SERVICES</NavLink>
         <NavLink to="/work" className={({ isActive }) => (isActive ? "active link" : "link")}>WORK</NavLink>
@@ -12,6 +12,11 @@ const Navbar = () => {
         <NavLink to="/blog" className={({ isActive }) => (isActive ? "active link" : "link")}>BLOG</NavLink>
         <NavLink to="/contact" className={({ isActive }) => (isActive ? "active link button" : "link button")}>HIRE ME!</NavLink>
       </nav>
+      <div className="small-screen navbar">
+        <nav>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active link logo" : "link logo")}>Ankita Budhia</NavLink>
+        </nav>      
+      </div>
     </div>
   );
 };

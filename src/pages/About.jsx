@@ -71,9 +71,9 @@ const About = () => {
           />
         </div>
         <div className="me-text">
-          <h3 className="steps-head">
+          <h1 className="steps-head">
             Ankita <br /> <span>Budhia</span>
-          </h3>
+          </h1>
           <p className="one-liner">
             Empowering Your Online Presence with Expert <br /> Web Development
             and Design Solutions.
