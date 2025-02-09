@@ -33,7 +33,7 @@ const MarqueeText = () => {
   style={{
     background: "#3228186a",
     color: "white",
-    padding: "10px",
+    padding: "10px 0",
     margin:"2rem 0 0",
     borderTop:"1px solid #c8f90424",
     borderBottom:"1px solid #c8f90424",

@@ -35,8 +35,12 @@ const Wrapper = styled.div`
           padding: 8px;
           background-color: rgba(218, 197, 167, 0.16);
           border:1px solid rgba(201, 250, 5, 0.28);
+          color: white;
           &::placeholder{
             color: rgba(218, 197, 167, 0.41);
+          }
+          &:focus,&:active{
+            outline: none;
           }
         }
       }

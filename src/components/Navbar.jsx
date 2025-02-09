@@ -9,8 +9,8 @@ const Navbar = () => {
         <NavLink to="/services" className={({ isActive }) => (isActive ? "active link" : "link")}>SERVICES</NavLink>
         <NavLink to="/work" className={({ isActive }) => (isActive ? "active link" : "link")}>WORK</NavLink>
         <NavLink to="/about" className={({ isActive }) => (isActive ? "active link" : "link")}>ABOUT</NavLink>
-        <NavLink to="/blog" className={({ isActive }) => (isActive ? "active link" : "link")}>BLOG</NavLink>
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? "active link button" : "link button")}>HIRE ME!</NavLink>
+        <NavLink to="/testimonial" className={({ isActive }) => (isActive ? "active link" : "link")}>TESTIMONIAL</NavLink>
+        <NavLink to="/contact" className={({ isActive }) => (isActive ? "active link button" : "link button")}>LET'S TALK!</NavLink>
       </nav>
       <div className="small-screen navbar">
         <nav>

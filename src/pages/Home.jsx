@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import dp from "../assets/images/profile.png";
 import "../assets/css/Home.css";
 import { FaArrowDown } from "react-icons/fa6";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import AOS from "aos";
-import { Testimonial, Timeline } from "../components";
+import { Timeline } from "../components";
 import {
   SlSocialGoogle,
   SlSocialInstagram,
@@ -18,11 +18,12 @@ import lapy from "../assets/images/laptop.jpg"
 import Marquee from "react-fast-marquee";
 import chavilogo from "../assets/images/logochavi.png"
 import mealmitra from "../assets/images/meal_mitra_logo.png"
+import novmii from "../assets/images/novmii.png"
 import { services } from "../assets/utils/data";
 
 const Home = () => {
 
-  const logoList = [chavilogo, mealmitra];
+  const logoList = [chavilogo, mealmitra, novmii];
   useEffect(() => {
     AOS.init({duration:1000});
   }, []);
@@ -43,6 +44,7 @@ const Home = () => {
         Crafting tailored digital experiences with expertise in <br /> MERN,
         Shopify, Wix, and WordPress.
       </p>
+      <Link to="/contact" className="link button">HIRE ME!</Link>
       <Skills />
       <div className="link-service">
         <a href="#services" className="link">
@@ -128,18 +130,7 @@ const Home = () => {
         <Timeline />
       </section>
 
-      <section className="testimonial" id="testimonial">
-        <h2 className="head steps-head">
-          What my <br /> <span>clients say</span>
-        </h2>
-        <div>
-          <p className="one-liner">
-            See what my clients have to say about working with me and the
-            results I helped them achieve.
-          </p>
-        </div>
-        <Testimonial />
-      </section>
+    
       <section className="about">
         <div></div>
         <div className="about-text">

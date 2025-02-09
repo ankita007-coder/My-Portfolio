@@ -1,58 +1,105 @@
-
+import React from "react";
+import Slider from "react-slick";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import "../assets/css/Testimonial.css"
 import prachi from "../assets/images/1.png";
 import chavi from "../assets/images/2.png";
 import mealmitra from "../assets/images/3.png"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from 'react-responsive-carousel';
-import "../assets/css/Testimonial.css"
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-const Testimonial = () => {
-  const slides = [
-    {
-      title: "Chavi Kumari",
-      subTitle: "Graphic Designer",
-      description:
-        "I had the pleasure of working with Ankita on developing my website, and she did an incredible job! The final result was exactly what I envisioned, and she brought my ideas to life perfectly. Her professionalism, attention to detail, and expertise were impressive throughout the project. I’m beyond satisfied with the outcome and will definitely be working with her again in the future. Highly recommend!",
-      imageUrl: chavi,
-    },
-    {
-      title: "Prachi Mittal",
-      subTitle: "Graphic Designer",
-      description:
-        "Working with Ankita Budhia was a seamless experience. She brought my website design to life with precision and professionalism, perfectly aligning the development with my vision. The results were exactly as I had imagined, and her attention to detail was impressive. I highly recommend Ankita for her exceptional work!",
-      imageUrl: prachi,
-    },
-    {
-      title: "Meal Mitra",
-      subTitle: "Tiffin Service Company",
-      description:
-"I am incredibly impressed with the work my freelancer has delivered. She has shown exceptional dedication, providing top-quality work at very reasonable prices while adhering strictly to the agreed timelines. Her professionalism and commitment to excellence are truly commendable. I highly recommend her services to anyone seeking reliable and skilled expertise",      
-imageUrl: mealmitra,
-    },
-  ];
+import novmii from "../assets/images/novmiilogo.jpg"
+const testimonials = [
+  {
+    name: "Chavi Kumari",
+    role: "Graphic Designer",
+    image: chavi,
+    feedback:
+      "I had the pleasure of working with Ankita on developing my website, and she did an incredible job! The final result was exactly what I envisioned, and she brought my ideas to life perfectly.",
+  },
+  {
+    name: "Prachi Mittal",
+    role: "Graphic Designer",
+    image: prachi,
 
+    feedback:
+      "Working with Ankita Budhia was a seamless experience. She brought my website design to life with precision and professionalism, perfectly aligning the development with my vision.",
+  },
+  {
+    name: "Meal Mitra",
+    role: "Tiffin Service Company",
+    image: mealmitra,
+    feedback:
+      "I am incredibly impressed with the work my freelancer has delivered. She has shown exceptional dedication, providing top-quality work at very reasonable prices while adhering strictly to the agreed timelines.",
+  },
+  {
+    name:"Novmii IT Solutions",
+    role:"IT Consultancy Company",
+    image:novmii,
+    feedback:`We would like to thank Ankita for creating our website. Her expertise, 
+    performance and attention to detail made the entire process smooth and successful. 
+    I had the privilege of working with Ankita in creating my website, 
+    and she did an incredible job! The end result was exactly as I had imagined, 
+    and she brought my ideas to life perfectly. Her performance, attention to detail 
+    and expertise throughout the project was impressive. I am extremely satisfied with 
+    the result and will definitely work with her again in the future!`
+  }
+];
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+const Testimonial = () => {
   return (
-    <Carousel infiniteLoop interval={5000}>
-      {slides.map((slide, index) => (
-        <div className="slides" key={index}>
-          <div className="profile-img">
-            <LazyLoadImage
-            src={slide.imageUrl}
-            alt={slide.title}
-            effect="blur" 
-            width="200px"
-            
-          />
+    <div className="testimonial-container">
+      <Slider {...settings}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="testimonial-card">
+            <div>
+              <LazyLoadImage
+              src={testimonial.image}
+              alt={testimonial.name}
+              effect="blur"
+              className="testimonial-image"
+            />
+            </div>
+            <h3>{testimonial.name}</h3>
+            <h4>{testimonial.role}</h4>
+            <p>
+              <FaQuoteLeft className="quote-icon" /> {testimonial.feedback}{" "}
+              <FaQuoteRight className="quote-icon" />
+            </p>
           </div>
-          <div className="review-text">
-            <h2>{slide.title}</h2>
-            <h3>{slide.subTitle}</h3>
-            <p><span><FaQuoteLeft/> </span>{slide.description} <span><FaQuoteRight/></span></p>
-          </div>
-        </div>
-      ))}
-    </Carousel>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

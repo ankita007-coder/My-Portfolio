@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "../assets/css/Home.css"
 import Wrapper from '../assets/wrappers/Service'
 import { LazyLoadImage } from 'react-lazy-load-image-component'

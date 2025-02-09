@@ -28,13 +28,13 @@ const Footer = () => {
       url: "/about",
       label: "About",
     },
+    // {
+    //   url: "/pricing",
+    //   label: "Pricings",
+    // },
     {
-      url: "/skills",
-      label: "Skills",
-    },
-    {
-      url: "/blog",
-      label: "Blog",
+      url: "/testimonial",
+      label: "Testimonial",
     },
     {
       url: "/contact",

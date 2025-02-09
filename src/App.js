@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Footer, Navbar } from './components'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { About, Blog, Contact, Home, Services, Skills, Work } from './pages'
+import { About, Blog, Contact, Home, NotFound, Services, Skills, Work } from './pages'
 
 const App = () => {
   const { pathname } = useLocation();
@@ -18,8 +18,9 @@ const App = () => {
         <Route path='/work' element={<Work/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/skills' element={<Skills/>}/>
-        <Route path='/blog' element={<Blog/>}/>
+        <Route path='/testimonial' element={<Blog/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer/>
     </div>
