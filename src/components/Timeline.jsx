@@ -43,7 +43,7 @@ const timelineData = [
 
 const Timeline = () => {
     useEffect(() => {
-      AOS.init({ });
+      AOS.init({duration: 5000});
     }, []);
   return (
     <div className="timeline-container">

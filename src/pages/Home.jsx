@@ -25,7 +25,7 @@ const Home = () => {
 
   const logoList = [chavilogo, mealmitra, novmii];
   useEffect(() => {
-    AOS.init({});
+    AOS.init({duration:5000});
   }, []);
 
   return (
