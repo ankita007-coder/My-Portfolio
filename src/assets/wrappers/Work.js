@@ -11,9 +11,11 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   border: 1px solid #dac5a741;
+  
 }
 .image img {
   width: 100%;
+  filter: brightness(0.6);
 }
 
 .image-text {

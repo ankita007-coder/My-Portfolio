@@ -3,106 +3,119 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   .about-me {
     display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 300vh;
+  }
+  .steps-head {
+  font-size: 2.5rem;
+    color: var(--neongreen);
+  }
+  .my-pic {
+    width: 40%;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+  }
+
+  .my-pic-box {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+  }
+
+  .me-text {
+    width: 60%;
+    position: relative;
+    /* needs to be tall enough — 100vh per card works well */
+    height: calc(100vh * 3); /* adjust multiplier = number of cards */
+  }
+  .about-card {
+    position: sticky;
+    /* top is now set inline via style prop */
+    min-height: 70vh;
+    padding: 40px;
+    border-radius: 28px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
     align-items: center;
-    height: 500px;
-    margin: 20px;
-    gap: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    transform-origin: top center; /* key for stacking feel */
+    will-change: transform;
+  }
+  .about-card p {
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+
+  .others {
+    margin-top: 80px;
+  }
+
+  .others h3 {
+    font-size: 3rem;
+  }
+
+  .hobbies {
+    display: flex;
+    align-items: center;
     justify-content: space-evenly;
+  }
+
+  .hobbies .text {
+    width: 30%;
+  }
+
+  .hobbies .text p {
+    font-size: 1.4rem;
+  }
+
+  .hobbies .slider {
+    width: 40%;
+  }
+
+  .hobbies .slider img {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .about-me {
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    .my-pic,
+    .me-text {
+      width: 100%;
+    }
+
     .my-pic {
-      width: 50%;
-      height: 100%;
-      position: sticky;
-      top: 20px;
-      overflow: hidden;
-      img{
-        height: 100%;
-      }
+      position: relative;
+      top: 0;
     }
 
     .me-text {
-      width: 50%;
-      height: 100%;
-      overflow-y: scroll;
-      scrollbar-width: none;
-      padding: 20px;
-      box-sizing: border-box;
-      h1 {
-        margin-bottom: 10px;
-        text-align: left;
-        color: var(--neongreen);
-        span {
-          font-size: 8rem;
-        }
-      }
-      p {
-        text-align: left;
-      }
-      .me-box {
-        margin-top: 6rem;
-        background-color: rgba(218, 197, 167, 0.087);
-        padding: 20px 24px;
-        border-radius: 6px;
-        border: 1px solid rgba(18, 16, 13, 0.28);
-        h3 {
-          font-size: 2rem;
-          margin: 8px 0;
-        }
-        h4 {
-          color: #6163eb;
-          font-family:"Helvetica Neue",Helvetica,Arial;
-          font-size: 1.2rem;
-          font-weight: 500;
-          margin: 0;
-          
-        }
-      }
+      height: auto;
+    }
+
+    .about-card {
+      position: relative;
+      top: 0;
+      min-height: auto;
+    }
+
+    .hobbies {
+      flex-direction: column;
+    }
+
+    .hobbies .text,
+    .hobbies .slider {
+      width: 100%;
     }
   }
-  .others{
-        h3{
-            font-size: 3rem;
-        }
-        .hobbies{
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            .text{
-                width: 30%;
-                p{
-                    font-size: 1.4rem;
-                }
-            }
-            .slider{
-                width: 40%;
-                img{
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-.slick-slide {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-}
-
-.slick-prev:before,
-.slick-next:before {
- 
- color: var(--neongreen);
- border-radius: 50%;
-}
-
-
-.slick-dots li button:before {
-  color: #fff;
-  font-size: 12px;
-}
-
-.slick-dots li.slick-active button:before {
-  color: var(--neongreen);
-}
-
 `;
 
 export default Wrapper;

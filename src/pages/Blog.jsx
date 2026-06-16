@@ -1,5 +1,4 @@
 import React from "react";
-import Testimonial from "../components/Testimonial";
 import "../assets/css/Testimonial.css";
 const Blog = () => {
   return  <section className="testimonial" id="testimonial">
@@ -12,7 +11,7 @@ const Blog = () => {
       results I helped them achieve.
     </p>
   </div>
-  <Testimonial />
+ 
 </section>
 };
 

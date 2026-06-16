@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import { Footer, Navbar } from './components'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { About, Blog, Contact, Home, NotFound, Services, Skills, Work } from './pages'
-
+import { About, Blog, Contact, Home, NotFound, Services, Skills } from './pages'
+import Experience from './pages/Experience'
+import Projects from "./pages/Projects"
+import ProjectDetail from './pages/ProjectDetail'
 const App = () => {
   const { pathname } = useLocation();
 
@@ -14,11 +16,12 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/work' element={<Work/>}/>
+        <Route path='/projects' element={<Projects/>}/>
+        <Route path="/project/:id" element={<ProjectDetail/>}/>
+        <Route path='/experience' element={<Experience/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/skills' element={<Skills/>}/>
-        <Route path='/testimonial' element={<Blog/>}/>
+        <Route path='/blogs' element={<Blog/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>

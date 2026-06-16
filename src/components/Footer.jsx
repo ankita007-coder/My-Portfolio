@@ -17,25 +17,18 @@ const Footer = () => {
       label: "Home",
     },
     {
-      url: "/services",
-      label: "Services",
+      url: "/projects",
+      label: "Projects",
     },
     {
-      url: "/work",
-      label: "Work",
+      url: "/experience",
+      label: "Experience",
     },
     {
       url: "/about",
       label: "About",
     },
-    // {
-    //   url: "/pricing",
-    //   label: "Pricings",
-    // },
-    {
-      url: "/testimonial",
-      label: "Testimonial",
-    },
+
     {
       url: "/contact",
       label: "Contact",
@@ -43,61 +36,95 @@ const Footer = () => {
   ];
   return (
     <>
-     <Marquee/>
-        <section className="contact">
-      <h2 className="head steps-head">
-         Let's make your <br /> <span>website shine</span>
+      <Marquee />
+      <section className="contact">
+        <h2 className="head steps-head" style={{ fontSize: "3rem" }}>
+          Built with curiosity. <br />
+          <span> Open to possibilities.</span>
         </h2>
+
         <p className="one-liner">
-        Crafting tailored digital experiences with expertise <br />in MERN, Shopify, Wix, and WordPress.
+          Whether it's frontend engineering, full-stack development, <br />
+          or simply geeking out over a cool idea, I'd love to connect.
         </p>
-        <Link to="/contact" className="link button">Get in touch!</Link>
+
+        <Link to="/contact" className="link button">
+          Let's Connect →
+        </Link>
       </section>
       <footer>
-            <div className="logo-about">
-        <h3 className="logo">Ankita Budhia</h3>
-        <p>
-          {" "}
-          Hi, I'm Ankita Budhia – a full-stack MERN developer with expertise in
-          React.js , as well as web design and development for Wix, WordPress,
-          and Shopify
-        </p>
-      </div>
-      <div className="links">
-        <h3>Useful Links</h3>
-        <ul>
-          {links.map((link) => {
-            return (
-              <li key={link.url}>
-                <Link to={`${link.url}`} className="link">
-                  {link.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className="connect">
-        <h3 className="con-head">GET IN TOUCH!</h3>
-        <div className="social-media">
-          <div className="icons">
-            <SlSocialGithub />
-          </div>
-          <div className="icons">
-            <SlSocialGoogle />
-          </div>
-          <div className="icons">
-            <SlSocialInstagram />
-          </div>{" "}
-          <div className="icons">
-            <SlSocialLinkedin />
-          </div>{" "}
-          <div className="icons">
-            <SlSocialYoutube />
+        <div className="logo-about">
+          <h3 className="logo">Ankita Budhia</h3>
+
+          <p>
+            Software Engineer passionate about building products that blend
+            thoughtful engineering with exceptional user experiences. From
+            enterprise applications and GenAI workflows to side projects, I love
+            creating software that makes an impact.
+          </p>
+        </div>
+        <div className="links">
+          <h3>Useful Links</h3>
+          <ul>
+            {links.map((link) => {
+              return (
+                <li key={link.url}>
+                  <Link to={`${link.url}`} className="link">
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="connect">
+          <h3 className="con-head">GET IN TOUCH!</h3>
+          <div className="social-media">
+            <a
+              href="https://github.com/ankita007-coder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icons"
+              aria-label="GitHub"
+            >
+              <SlSocialGithub />
+            </a>
+
+            <a
+              href="mailto:ankitabudhia0302@gmail.com"
+              className="icons"
+              aria-label="Email"
+            >
+              <SlSocialGoogle />
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/in/ankita-budhia-7b44861b8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icons"
+              aria-label="LinkedIn"
+            >
+              <SlSocialLinkedin />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@codingwithAnkita"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icons"
+              aria-label="YouTube"
+            >
+              <SlSocialYoutube />
+            </a>
           </div>
         </div>
-        </div>
-    </footer>
+      </footer>
+      <div className="copyright">
+        © {new Date().getFullYear()} Ankita Budhia. Designed & developed with ❤️
+        and a healthy amount of console.log().
+      </div>
     </>
   );
 };

@@ -68,7 +68,24 @@
   z-index: 1;
   font-family: 'Santoshi', sans-serif;
 }
+.highlights {
+  margin: 12px 0;
+  padding-left: 18px;
+  list-style-type:square;
+}
 
+.highlights li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.impact {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .timeline-container::before {

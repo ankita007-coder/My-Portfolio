@@ -29,65 +29,70 @@ export default Skills;
 
 
 const skillsData = [
-  // MERN Stack
   {
     name: "React.js",
-    image: "https://cdn-icons-png.flaticon.com/512/1183/1183672.png", // React.js logo
+    image: "https://cdn-icons-png.flaticon.com/512/1183/1183672.png",
   },
   {
-    name: "MongoDB",
-   // image: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png", // MongoDB logo
-   image:"https://img.icons8.com/?size=100&id=74402&format=png&color=000000"
+    name: "Next.js",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
-    name: "Express.js",
-    image: express, // Express.js logo
+    name: "TypeScript",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
     name: "Node.js",
-    image: "https://cdn-icons-png.flaticon.com/512/919/919825.png", // Node.js logo
-  },
-
-  // Core Web Development
-  {
-    name: "HTML",
-    image: "https://cdn-icons-png.flaticon.com/512/732/732212.png", // HTML logo
+    image: "https://cdn-icons-png.flaticon.com/512/919/919825.png",
   },
   {
-    name: "CSS",
-    image: "https://cdn-icons-png.flaticon.com/512/732/732190.png", // CSS logo
+    name: "Express.js",
+    image: express, // your local Express icon
+  },
+  {
+    name: "MongoDB",
+    image:
+      "https://img.icons8.com/?size=100&id=74402&format=png&color=000000",
+  },
+  {
+    name: "Redis",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+  },
+{
+  name: "Tailwind CSS",
+  image: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+},
+{
+  name: "Tanstack Query",
+  image: "https://tanstack.com/favicon.ico",
+},
+  {
+    name: "Redux Toolkit",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
   },
   {
     name: "JavaScript",
-    image: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png", // JavaScript logo
+    image:
+      "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
   },
-
-  // Additional Technologies
   {
     name: "Git",
-    image: "https://cdn-icons-png.flaticon.com/512/2111/2111288.png", // Git logo
+    image:
+      "https://cdn-icons-png.flaticon.com/512/2111/2111288.png",
+  },
+  {
+    name: "Docker",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
   {
     name: "SASS",
-    image: "https://cdn-icons-png.flaticon.com/512/919/919831.png", // SASS logo
-  },
-  {
-    name: "Python",
-    image: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png", // Python logo
-  },
-
-  // Website Builders
-  {
-    name: "Wix",
-    image: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png", // Wix logo
-  },
-  {
-    name: "Shopify",
-    image: "https://img.icons8.com/?size=100&id=uSHYbs6PJfMT&format=png&color=000000", // Shopify logo
-  },
-  {
-    name: "WordPress",
-    image: "https://cdn-icons-png.flaticon.com/512/174/174881.png", // WordPress logo
+    image:
+      "https://cdn-icons-png.flaticon.com/512/919/919831.png",
   },
 ];
 
