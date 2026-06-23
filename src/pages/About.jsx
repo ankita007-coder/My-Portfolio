@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import "../assets/css/Home.css";
-import dp from "../assets/images/profile.png";
+import dp from "../assets/images/profile.jpeg";
 import Wrapper from "../assets/wrappers/About";
 import Slider from "react-slick";
 import coffee from "../assets/images/cold coffee.jpg";
@@ -8,7 +8,7 @@ import pasta from "../assets/images/pasta.jpg";
 import pav from "../assets/images/pav bhaji.jpg";
 import oats from "../assets/images/oats cupcaks.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import Card from "../components/Card";
 
 const cards = [

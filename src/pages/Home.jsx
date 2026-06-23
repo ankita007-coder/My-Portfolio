@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import dp from "../assets/images/profile.png";
+import dp from "../assets/images/profile.jpeg";
 import "../assets/css/Home.css";
 import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -16,7 +16,6 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import Skills from "./Skills";
 import lapy from "../assets/images/laptop.jpg";
 import Marquee from "react-fast-marquee";
-import { services } from "../assets/utils/data";
 import { projects } from "../assets/utils/projectsData";
 import Experience from "./Experience";
 

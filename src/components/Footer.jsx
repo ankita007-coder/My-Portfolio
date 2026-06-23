@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import {
   SlSocialGithub,
   SlSocialGoogle,
-  SlSocialInstagram,
   SlSocialLinkedin,
   SlSocialYoutube,
 } from "react-icons/sl";

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Footer, Navbar } from './components'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { About, Blog, Contact, Home, NotFound, Services, Skills } from './pages'
+import { About, Blog, Contact, Home, NotFound, Skills } from './pages'
 import Experience from './pages/Experience'
 import Projects from "./pages/Projects"
 import ProjectDetail from './pages/ProjectDetail'
