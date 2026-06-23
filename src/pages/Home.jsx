@@ -23,13 +23,13 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div>
+      <div class="my-pic">
         <LazyLoadImage
           src={dp}
           alt="profile"
           effect="blur"
           className="my-pic-box"
-          width="100%"
+        width={300}
         />
       </div>
       <h1 className="head">Ankita Budhia</h1>
