@@ -8,7 +8,6 @@ import pasta from "../assets/images/pasta.jpg";
 import pav from "../assets/images/pav bhaji.jpg";
 import oats from "../assets/images/oats cupcaks.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { useScroll, useTransform } from "framer-motion";
 import Card from "../components/Card";
 
 const cards = [

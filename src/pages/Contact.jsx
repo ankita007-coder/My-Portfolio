@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 import Wrapper from "../assets/wrappers/Contact";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import dp from "../assets/images/profile.jpeg";

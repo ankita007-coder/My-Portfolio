@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import dp from "../assets/images/profile.jpeg";
 import "../assets/css/Home.css";
-import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import AOS from "aos";
-import { SingleProject, Timeline } from "../components";
+import { SingleProject } from "../components";
 import {
   SlSocialGoogle,
   SlSocialInstagram,
@@ -14,8 +13,6 @@ import {
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Skills from "./Skills";
-import lapy from "../assets/images/laptop.jpg";
-import Marquee from "react-fast-marquee";
 import { projects } from "../assets/utils/projectsData";
 import Experience from "./Experience";
 
