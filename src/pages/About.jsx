@@ -40,10 +40,6 @@ const About = () => {
 
   const list = [
     {
-      name: "Penning down poetry to express fleeting thoughts",
-      images: [],
-    },
-    {
       name: "Binge-watching movies and series, from classics to thrillers",
       images: [],
     },
